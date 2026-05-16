@@ -1,0 +1,27 @@
+name: Salesforce DevSecOps Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Show repository structure
+        run: ls -R
+
+      - name: Validate Salesforce project structure
+        run: |
+          echo "Checking project folders..."
+
+          test -d force-app
+          test -d .github
+          test -d scripts
+
+          echo "Structure OK"
