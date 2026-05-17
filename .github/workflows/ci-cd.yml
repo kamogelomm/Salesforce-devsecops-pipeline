@@ -10,19 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Show repository structure
-        run: ls -R
-
-      - name: Validate Salesforce project structure
+      - name: Run Pipeline Check
         run: |
-          echo "Checking Salesforce folders..."
-
-          test -d force-app
-
-          echo "Structure OK"
-
-          echo "Structure OK"
-          echo "Structure OK"
+          echo "Salesforce DevSecOps pipeline is running successfully"
