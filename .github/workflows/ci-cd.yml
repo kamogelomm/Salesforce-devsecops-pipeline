@@ -13,6 +13,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Run Pipeline Check
+      - name: Install Salesforce CLI
         run: |
-          echo "Salesforce DevSecOps pipeline is running successfully"
+          npm install --global @salesforce/cli
+
+      - name: Verify Salesforce CLI Installation
+        run: sf --version
+
+      - name: Pipeline Success Message
+        run: echo "Salesforce CLI installed successfully"
