@@ -25,3 +25,4 @@ jobs:
           test -d scripts
 
           echo "Structure OK"
+          echo "Structure OK"
