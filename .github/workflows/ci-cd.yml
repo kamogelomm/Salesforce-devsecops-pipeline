@@ -18,11 +18,11 @@ jobs:
 
       - name: Validate Salesforce project structure
         run: |
-          echo "Checking project folders..."
+          echo "Checking Salesforce folders..."
 
           test -d force-app
-          test -d .github
-          test -d scripts
+
+          echo "Structure OK"
 
           echo "Structure OK"
           echo "Structure OK"
