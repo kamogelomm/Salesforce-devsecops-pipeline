@@ -28,6 +28,8 @@ jobs:
         run: |
           echo "Validating Salesforce project structure..."
           ls -R
-
-      - name: Pipeline Success
-        run: echo "Salesforce DevSecOps pipeline completed successfully"
+ 
+       - name: Validate Salesforce Project
+        run: |
+          echo "Checking Salesforce metadata..."
+            ls force-app/main/default
