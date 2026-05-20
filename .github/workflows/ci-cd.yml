@@ -18,7 +18,7 @@ jobs:
 
       - name: Authenticate Salesforce Org
         run: |
-          echo "${{ secrets.SF_AUTHENTICATION_URL }}" > auth.txt
+          echo "${{ secrets.SF_AUTHENTICATION_URL}}" > auth.txt
           sf org login sfdx-url --sfdx-url-file auth.txt --alias DevOrg
 
       - name: Verify Connected Org
