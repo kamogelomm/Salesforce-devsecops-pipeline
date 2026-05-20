@@ -28,8 +28,13 @@ jobs:
         run: |
           echo "Validating Salesforce project structure..."
           ls -R
- 
-       - name: Validate Salesforce Project
+          
+      - name: Validate Salesforce Project
         run: |
-          echo "Checking Salesforce metadata..."
-            ls force-app/main/default
+         echo "Checking Salesforce metadata..."
+
+          ls force-app/main/default
+
+      - name: Validate deployment (dry run)
+        run: |
+         sf project deploy validate --target-org DevOrg
